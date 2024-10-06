@@ -102,8 +102,8 @@ cd PluTail
 
 ---
 
-- PluMon - Rulimony (Russian flash game), work in progress...
-- VixMon - web side of Mogobe, work in progress...
+- PluMon - server side of Rulimony (Russian flash game), work in progress...
+- VixMon - web side of Rulimony, work in progress...
 
 **❗ Attention! The server does not support games with the heavily modified SmartFoxServer 1.x protocol, support is also
 not expected in the future (for example, club penguin, use [Houdini](https://github.com/solero/houdini))**
@@ -114,21 +114,24 @@ not expected in the future (for example, club penguin, use [Houdini](https://git
 
 ## Support
 
-| Feature          | Support |
-|------------------|---------|
-| **Default**      |         |
-| TCP              | ✔       |
-| Login            | ?       |
-| Protocol         | ?       |
-| Packets handling | ?       |
-| User data store  | ✔       |
-| Room handling    | ?       |
-| Chatting         | ❌       |
-| Game commands    | ❌       |
-| Chat filter      | ❌       |
-| Plugins          | ?       |
-| Console commands | ❌       |
-| BlueBox          | ❌       |
+| Feature            | Support |
+|--------------------|---------|
+| TCP                | ✔       |
+| Login              | ?       |
+| Protocol           | ?       |
+| Packets handling   | ?       |
+| User data store    | ✔       |
+| Room handling      | ?       |
+| Chatting           | ❌       |
+| Game commands      | ❌       |
+| Exceptions handler | ❌       |
+| Chat filter        | ❌       |
+| Cache system       | ❌       |
+| Rate limit         | ❌       |
+| Chatting           | ❌       |
+| Plugins            | ?       |
+| Console commands   | ❌       |
+| BlueBox            | ❌       |
 
 - ✔ - Full support
 - ? - Partial support

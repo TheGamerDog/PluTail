@@ -30,7 +30,7 @@
         </layout>
     </appender>
 
-    <root level="debug">
+    <root level="trace">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE-ROLLING"/>
     </root>
