@@ -7,7 +7,8 @@ enum class SysCommandName(
     Login("login"),
     GetRoomList("getRmList"),
     SetUserVars("setUvars"),
-    PublicMessage("pubMsg");
+    PublicMessage("pubMsg"),
+    AsObj("asObj");
 
     companion object {
         fun get(key: String) = entries

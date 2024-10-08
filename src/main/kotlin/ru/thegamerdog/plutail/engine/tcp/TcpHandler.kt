@@ -56,13 +56,15 @@ class TcpHandler : ChannelInboundHandlerAdapter(), KoinComponent {
 
         val commandType = CommandType.get(message[0])
         if (commandType != CommandType.XML) return sendMessageToXt(user, message)
-
+        
         // Bypass for passing a string for sys and subsequent processing using special types
         val xmlArr = message.split("<")
         val outMessage = "<" + xmlArr[1] + "<" + xmlArr[2] + "</body></msg>"
         val inMessage = message
             .replace("<" + xmlArr[1] + "<" + xmlArr[2], "")
             .replace("</body></msg>", "")
+            .replace(Regex("^<!\\[CDATA\\["), "")
+            .replace(Regex("]]>$"), "")
 
         val xmlMessage = XML.decodeFromString(MsgXml.serializer(), outMessage)
         val commandCategory = CommandCategory.get(xmlMessage.t)

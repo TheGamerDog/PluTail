@@ -21,7 +21,7 @@ data class TextXml(
 
 class MessageHandler : ISysCommandHandler, KoinComponent {
     @SysCommandHandler(SysCommandName.PublicMessage)
-    fun sendPublicMessage(user: IUser, roomId: Int, xmlData: TextXml) {
+    fun onPublicMessage(user: IUser, roomId: Int, xmlData: TextXml) {
         PreMessageEvent(user, xmlData.value).call() // TODO: Logging, commands, filters, default behaviour
     }
 }
