@@ -85,7 +85,7 @@ class PluginManager : IPluginManager, KoinComponent {
                         val pluginClass = classLoader.loadClass(pluginConfig.mainClass)
                         val pluginInstance =
                             pluginClass.getDeclaredConstructor(PluginConfig::class.java, URLClassLoader::class.java)
-                                .newInstance(pluginConfig, loader) as Plugin
+                                .newInstance(pluginConfig, classLoader) as Plugin
 
                         if (pluginConfig.loadAfter.size > 0) {
                             dependencies.add(
